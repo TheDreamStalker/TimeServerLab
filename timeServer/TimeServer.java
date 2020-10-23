@@ -33,7 +33,6 @@ public class TimeServer {
                 TimeServerThread clientThread = new TimeServerThread(clientSocket);
                 clients.add(clientThread);
                 pool.execute(clientThread);
-                //System.out.println(TimeServerThread.activeCount());
         	}
         } catch (IOException e) {
             System.err.println("Accept failed.");
